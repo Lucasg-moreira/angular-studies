@@ -1,0 +1,48 @@
+:root {
+  --cor-principal: rgba(0, 0, 0, 0.801);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.801)  ;
+  color: white;
+  padding: 20px;
+}
+
+
+nav h3 {
+  text-align: center;
+}
+
+ul {
+  margin: auto;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  padding-top: 10px;
+
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.list a:hover{
+  background-color: white;
+  color: rgba(0, 0, 0, 0.953);
+  transition: linear 0.20s;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+li {
+  margin-right: 20px;
+}
