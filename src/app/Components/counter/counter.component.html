@@ -1,0 +1,8 @@
+<span>
+  <h1>Um simples contador</h1>
+</span>
+<div class="counter-wrapper">
+  <button class="btn btn-secondary" (click)="incrementar(valor)">+</button>
+  <input type="text" [value]="valor" #inputValue readonly />
+  <button class="btn btn-secondary" (click)="diminuir(valor)">-</button>
+</div>

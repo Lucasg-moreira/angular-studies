@@ -1,0 +1,28 @@
+button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.icon {
+  margin: auto;
+  width: 25%;
+  text-align: center;
+}
+
+h1 {
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.margin {
+  margin-bottom: 1em;
+}
+.bi-x-circle-fill {
+  width: 70px;
+}
+
+
+.circle-fill {
+  color: red;
+}

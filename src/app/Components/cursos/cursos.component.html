@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>cursos</h1>
+  <h5>compartilhando serviços entre componentes</h5>
+  <input type="text" class="inpt" #inpt />
+  <button
+    class="btn btn-outline-secondary btn-sm"
+    type="submit"
+    (click)="addCurso(inpt.value, inpt)"
+  >
+    Send
+  </button>
+  <button
+    class="btn btn-outline-danger btn-sm"
+    type="submit"
+    (click)="deleteCurso()"
+    *ngIf="cursos.length > 0"
+  >
+    Remove
+  </button>
+  <ul *ngFor="let item of cursos">
+    <li>{{ item }}</li>
+  </ul>
+  <aside>
+    <p>para utilizar uma nova instância para cada serviço, utilize o provider dentro do componente ao invés do módulo</p>
+  </aside>
+  <app-receber-curso></app-receber-curso>
+</div>

@@ -1,0 +1,15 @@
+<div class="line"></div>
+<div class="container-fluid">
+  <div class="wrapper">
+    <h1>Ng-style</h1>
+    <!--condicional in-line/ condicional via argumentos-->
+    <button class="btn"  [ngStyle]="{
+      'background-color' : (switchProps ? 'black' : 'transparent'),
+      'border' : 0,
+      'color' : (!switchProps ? 'black' : 'white'),
+      'border-radius.px': 10
+    }
+    " (click)="switch()">Switch props!
+    </button>
+  </div>
+</div>

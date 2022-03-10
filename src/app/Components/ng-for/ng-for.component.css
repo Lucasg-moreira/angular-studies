@@ -1,0 +1,13 @@
+.container {
+  margin:auto
+}
+
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+}
+
+ul {
+  list-style-type: none;
+}

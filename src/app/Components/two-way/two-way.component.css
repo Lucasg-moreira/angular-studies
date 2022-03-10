@@ -1,0 +1,27 @@
+section {
+  padding: 30px;
+
+}
+
+.wrapper-inpt {
+  padding: 30px;
+  margin: auto;
+}
+
+p span {
+  font-weight: bolder;
+}
+
+.inpt {
+  margin-left: 10px;
+}
+
+
+.wrapper {
+  margin: auto;
+}
+
+.line {
+  border-top: 2px solid black
+  ;
+}

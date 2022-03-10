@@ -1,9 +1,57 @@
-<main>
-  <div class="alert alert-success" role="alert">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-    <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+<h1>Property bind</h1>
+<select #option (change)="(0)">
+  <option value="alert-success">Success</option>
+  <option value="alert-danger">Danger</option>
+  <option value="alert-warning">Warning</option>
+  <option value="alert-dark">Error</option>
+</select>
+<br /><br />
+<div
+  class="alert"
+  role="alert"
+  [class.alert-success]="option.value == 'alert-success'"
+>
+  A simple success alert—check it out!
+</div>
+<div
+  class="alert"
+  role="alert"
+  [class.alert-danger]="option.value == 'alert-danger'"
+>
+  A simple danger alert—check it out!
+</div>
+<div
+  class="alert"
+  role="alert"
+  [class.alert-warning]="option.value == 'alert-warning'"
+>
+  A simple warning alert—check it out!
+</div>
+<div
+  class="alert"
+  role="alert"
+  [class.alert-dark]="option.value == 'alert-dark'"
+>
+  A simple dark alert—check it out!
+</div>
+<br />
+<div class="wrapper-event">
+  <h1>Event bind</h1>
+  <div class="btn-alert">
+    <button type="button" class="btn btn-dark" (click)="mouseClick($event)">
+      Clique-me
+    </button>
   </div>
-</main>
-
+</div>
+<!-- <aside>
+      <input type="text" (change)="valor($event)" #valueT
+      (keyup)="valueInput($event)"
+      (keyup.enter)="valor($event.target.value)">
+      <p>valor atual do input: {{valorSalvo}}</p>
+      <p>valor salvo: {{valorSalvo}}</p>
+    </aside> -->
+<article>
+  <app-two-way></app-two-way>
+  <app-data-binding></app-data-binding>
+  
+</article>

@@ -1,0 +1,31 @@
+<section class="two-way-data-binding">
+
+
+    <div class="wrapper">
+      <h3>two-way data binding</h3>
+      <input type="text" #valorinput
+      [value]="name"
+      (input)="name = valorinput.value">
+
+      <h3>utilizando ngModel</h3>
+      <input type="text" [ngModel]="name"(ngModelChange)="name = $event"
+      >
+
+      <h3>Utilizando banana in a box</h3>
+      <input type="text" [(ngModel)]="name">
+
+      <p>a variavel name contem: {{name}}</p>
+      <div class="line"></div>
+      <div >
+        <h4>Outro exemplo de data binding</h4>
+        <input type="text" [(ngModel)]="pessoas.nome">
+        <input type="text" [(ngModel)]="pessoas.idade" class="inpt">
+
+        <p>o nome da pessoa é: <span>{{pessoas.nome}}</span></p>
+        <p>a idade da pessoa é: <span>{{pessoas.idade}}</span></p>
+        <p>o numero da pessoa é: <span>{{pessoas.endereco.numero}}</span></p>
+      </div>
+    </div>
+
+</section>
+

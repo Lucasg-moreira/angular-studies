@@ -1,0 +1,19 @@
+<div class="ng-if">
+  <div class="container">
+    <div class="buttons">
+      <button class="btn btn-primary" type="button"(click)="add()" (click)="exibirTamanho()">Add</button>
+      <button class="btn btn-danger" type="button" (click)="remove()" (click)="exibirTamanho()" *ngIf="tamanho > 0">Remove</button>
+    </div>
+    <div *ngIf="palavras.length > 0; else elseBlock">
+      <h1>tamanho da lista: {{ tamanho }}</h1>
+      <ul>
+        <li *ngFor="let item of palavras">{{ item }}</li>
+      </ul>
+    </div>
+    <ng-template #elseBlock>
+      <div class="alert alert-danger" role="alert" style="text-align: center;"> Não há nada na lista! Tente adicionar com o botão acima. </div>
+    </ng-template>
+  </div>
+</div>
+
+

@@ -1,3 +1,31 @@
-.alert{
-  margin-top: 2em;
+select {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+}
+
+select:hover {
+  border: 1px solid black;
+}
+
+.alert {
+  text-align: center;
+}
+
+.btn-alert {
+  width: 60px;
+  margin: auto;
+}
+button {
+  height: 100%;
+}
+
+aside  {
+  margin: auto;
+  width: 200px;
+}
+
+.wrapper-event {
+  margin-bottom: 2em;
 }

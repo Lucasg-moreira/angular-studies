@@ -1,0 +1,20 @@
+input {
+  border: none;
+  text-align: center;
+  width: 100px;
+  margin: auto;
+}
+
+.counter-wrapper {
+  width: 12em;
+  margin: auto;
+}
+button {
+  margin-right: 10px;
+}
+
+section {
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  height: 10em;
+  box-shadow: 1px 1px 10px;
+}
