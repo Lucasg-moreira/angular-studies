@@ -40,8 +40,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/service']" routerLinkActive="router-link-active">Services</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/http']" routerLinkActive="router-link-active">Http-client</a>
+          </li>
           <span class="navbar-text">Estudos Angular</span>
-          
+
         </ul>
       </div>
     </div>
@@ -49,5 +52,7 @@
 </div>
 
 <main>
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </main>

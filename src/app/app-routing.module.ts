@@ -1,3 +1,5 @@
+import { ClientsFormComponent } from './Components/clients-form/clients-form.component';
+import { PokedexComponent } from './Components/pokedex/pokedex.component';
 import { ServicePageComponent } from './pages/service-page/service-page/service-page.component';
 import { DiretivasComponent } from './pages/diretivas/diretivas.component';
 import { CounterPageComponent } from './pages/counter-page/counter-page.component';
@@ -8,23 +10,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { BtnstrapComponent } from './pages/btnstrap/btnstrap/btnstrap.component';
 import { ListaDinamicaComponent } from './pages/lista-dinamica/lista-dinamica.component';
 import { DataBindingComponent } from './Components/data-binding/data-binding.component';
-
-
+import { HttpClientComponent } from './Components/http-client/http-client.component';
 
 const routes: Routes = [
- { path: 'btn-strap', component: BtnstrapComponent},
- { path: 'Dinamic-List', component: ListaDinamicaComponent},
- { path: 'Interpolation', component: DataBindingComponent},
- { path: '', component: HomeComponent},
- { path: 'counter', component: CounterPageComponent},
- { path: 'diretivas', component: DiretivasComponent},
- { path: 'service', component: ServicePageComponent}
+  { path: 'btn-strap', component: BtnstrapComponent },
+  { path: 'Dinamic-List', component: ListaDinamicaComponent },
+  { path: 'Interpolation', component: DataBindingComponent },
+  { path: '', component: HomeComponent },
+  { path: 'counter', component: CounterPageComponent },
+  { path: 'diretivas', component: DiretivasComponent },
+  { path: 'service', component: ServicePageComponent },
 
-
+  {
+    path: 'http',
+    component: HttpClientComponent,
+    loadChildren: () =>
+      import('./Components/http-client/http-client/http-client.module').then(
+        (m) => m.HttpClientModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -4,8 +4,8 @@
   <h5>Title: {{ book.cleanCode.title | uppercase | camelCase}}</h5>
   <p>Pages: {{ book.cleanCode.pag }}</p>
   <p>Description: {{ book.cleanCode.desc | camelCase }}</p>
-
-  <p>Price: {{ book.cleanCode.price | currency }}</p>
+  <p>Data: {{ book.cleanCode.data | date:'dd/MM/yyyy'}}</p>
+  <p>Price: {{ book.cleanCode.price | currency:'BRL' }}</p>
   <p>Language: {{ book.cleanCode.language }}</p>
   <p>Rating: {{ book.cleanCode.rating | number}}</p>
   <hr>
