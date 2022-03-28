@@ -1,0 +1,19 @@
+{
+  "clients": [
+    {
+      "name": "Ifood",
+      "status": "Ativo",
+      "id": 1
+    },
+    {
+      "name": "amazon",
+      "status": "Desativado",
+      "id": 2
+    },
+    {
+      "name": "Telegram",
+      "status": "ativo",
+      "id": 3
+    }
+  ]
+}

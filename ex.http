@@ -1,0 +1,29 @@
+###
+
+http://localhost:3000/clients
+
+###
+POST http://localhost:3000/clients HTTP/1.1
+content-type: application/json
+
+{
+    "name": "amazon"
+}
+
+
+###
+PUT http://localhost:3000/cursos/3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "clients": "banana",
+  "id": 2
+}
+
+###
+DELETE http://localhost:3000/clients/3
+
+
+###
+
+http://pokeapi.glitch.me/v1/pokemon/rayquaza

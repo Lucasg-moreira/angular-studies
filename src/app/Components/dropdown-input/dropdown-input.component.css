@@ -1,0 +1,18 @@
+.text-black {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+#basic-link-dropdown{
+  position: relative;
+  cursor: pointer;
+  left: 1em;
+}
+
+.inline {
+  display: inline-block;
+}

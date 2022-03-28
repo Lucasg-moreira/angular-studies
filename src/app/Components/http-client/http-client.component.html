@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header">
+    <div class="float-start">
+      <h4>Clientes</h4>
+    </div>
+    <div class="float-end">
+      <button class="btn btn-primary" [routerLink]="['new']">Add</button>
+      {{ " " }}
+      <button class="btn btn-outline-secondary" (click)="onRefresh()">
+        Refresh
+      </button>
+    </div>
+  </div>
+</div>
+<div class="card-body">
+  <table
+    class="table table-hover"
+    *ngIf="clients$ | async as clientsAsy; else Loading"
+  >
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Clientes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clientsAsy">
+        <td>{{ client.id }}</td>
+        <td>{{ client.name }}</td>
+        <td>
+          <span class="float-end">
+            <button class="btn btn-outline-primary mb-1 btn-sm">
+              Atualizar
+            </button>
+            {{ " " }}
+            <button class="btn btn-outline-warning mb-1 btn-sm" (click)="del()">
+              Remover
+            </button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="err$ | async">
+    <span>
+      <app-alert-card></app-alert-card>
+    </span>
+  </div>
+  <ng-template #Loading>
+    <div class="d-flex justify-content-center mb-5">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+
+
