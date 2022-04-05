@@ -1,12 +1,13 @@
-<div class="card">
-  <div class="card-header">
+<div class="card" #tableClients>
+  <div class="card-header" *ngIf="tableClients">
     <div class="float-start">
       <h4>Clientes</h4>
     </div>
     <div class="float-end">
-      <button class="btn btn-primary" [routerLink]="['new']">Add</button>
+     <modal-add></modal-add>
       {{ " " }}
-      <button class="btn btn-outline-secondary" (click)="onRefresh()">
+      <button class="btn btn-outline-secondary"
+      (click)="onRefresh()">
         Refresh
       </button>
     </div>
@@ -54,6 +55,3 @@
     </div>
   </ng-template>
 </div>
-
-
-

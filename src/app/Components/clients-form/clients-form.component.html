@@ -1,11 +1,58 @@
-<div class="row">
-  <div class="col">
-    <input type="text" placeholder="Nome do cliente">
-  </div>
-  <div class="col">
-    <input type="text" placeholder="Status">
-  </div>
-  <div class="col">
-    <input type="text">
+<div #template>
+  <div class="modal-body">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group mb-3">
+        <label for="name" class="form-label">Nome do cliente <span id="req">*</span></label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          aria-describedby="emailHelp"
+          name="name"
+          ngModel
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email address <span id="req">*</span></label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          name="email"
+          ngModel
+          required
+          email
+          #email
+        />
+        {{ email.className }}
+
+
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else .
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="pwd" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="pwd"
+          name="pwd"
+          ngModel
+          required
+          #pwd
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+      </div>
+      <div *ngIf="email.className == 'ng-touched ng-invalid' " class="alert alert-danger mt-3 align-center"> Preencha todos os campos com <span class="req">"*"</span>!</div>
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+
+    </form>
   </div>
 </div>

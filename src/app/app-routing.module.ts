@@ -11,12 +11,14 @@ import { BtnstrapComponent } from './pages/btnstrap/btnstrap/btnstrap.component'
 import { ListaDinamicaComponent } from './pages/lista-dinamica/lista-dinamica.component';
 import { DataBindingComponent } from './Components/data-binding/data-binding.component';
 import { HttpClientComponent } from './Components/http-client/http-client.component';
+import { RouterOutletComponent } from './Components/http-client/router-outlet/router-outlet.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'btn-strap', component: BtnstrapComponent },
   { path: 'Dinamic-List', component: ListaDinamicaComponent },
   { path: 'Interpolation', component: DataBindingComponent },
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'counter', component: CounterPageComponent },
   { path: 'diretivas', component: DiretivasComponent },
   { path: 'service', component: ServicePageComponent },
@@ -29,10 +31,14 @@ const routes: Routes = [
         (m) => m.HttpClientModule
       ),
   },
+  {
+    path: '',
+    component: RouterOutletComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -1,11 +1,12 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, ElementRef } from '@angular/core';
 
 import { of, Observable, from, interval, catchError, Subject } from 'rxjs';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ClientsService } from './clients.service';
 import { Iclient } from './client';
 
-import { AlertModal } from '../alert-modal/alert-modal.component'
+import { AlertModal } from '../alert-modal/alert-modal.component';
+import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 
 @Component({
@@ -15,15 +16,19 @@ import { AlertModal } from '../alert-modal/alert-modal.component'
 })
 export class HttpClientComponent implements OnInit {
 
+  @ViewChild('teste') teste!: ElementRef<any>
 
   clients$: Observable<any> = of();
   err$ = new Subject<boolean>();
   modalRef?: BsModalRef;
 
+  config = {
+    animated: true
+  }
+
   constructor(
     private _service: ClientsService,
     private modalService: BsModalService,
-
   ) {}
 
   ngOnInit(): void {
@@ -52,6 +57,14 @@ export class HttpClientComponent implements OnInit {
   }
 
   del() {
-    this._service.remove();
+    
+  }
+
+
+
+
+  onShow(tableClients: any) {
+    tableClients = !tableClients
+    console.log(tableClients)
   }
 }
