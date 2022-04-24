@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ListaDinamicaComponent } from './lista-dinamica.component';
+import { NgxDropdownComponent } from './ngxDropdown.component';
 
-describe('ListaDinamicaComponent', () => {
-  let component: ListaDinamicaComponent;
-  let fixture: ComponentFixture<ListaDinamicaComponent>;
+describe('NgxDropdownComponent', () => {
+  let component: NgxDropdownComponent;
+  let fixture: ComponentFixture<NgxDropdownComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListaDinamicaComponent ]
+      declarations: [ NgxDropdownComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListaDinamicaComponent);
+    fixture = TestBed.createComponent(NgxDropdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

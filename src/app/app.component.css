@@ -1,5 +1,13 @@
-.navbar-text {
-  margin-left: 12em;
+#projectteste {
+  display: none;
+}
+
+
+#project:hover #projectteste {
+  color: red;
+  cursor: pointer;
+  display: block;
+
 }
 
 

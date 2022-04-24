@@ -6,6 +6,8 @@ import { environment } from './../../../environments/environment';
 import { delay, tap, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
+import { take } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -18,8 +20,11 @@ export class ClientsService {
     return this.http.get<Iclient[]>(this.API).pipe(delay(1500));
   }
 
-  addClients(ob:Observable<Iclient[]>) {
-    return this.
-    http.post<Iclient[]>(this.API, ob);
+  addClients(client_name: Observable<string>, status: Observable<string>) {
+    return this.http.post(this.API, client_name).pipe(take(1))
+  }
+
+  log() {
+    this.http.get(this.API).subscribe( json => console.log(json) );
   }
 }

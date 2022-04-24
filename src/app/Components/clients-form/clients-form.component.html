@@ -1,58 +1,85 @@
-<div #template>
+<div>
   <div class="modal-body">
-    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <form class="needs-validation" novalidate [formGroup]="form">
       <div class="form-group mb-3">
-        <label for="name" class="form-label">Nome do cliente <span id="req">*</span></label>
+        <label for="name" class="form-label"
+          >Nome do cliente <span id="req">*</span></label
+        >
         <input
           type="text"
           class="form-control"
           id="name"
-          aria-describedby="emailHelp"
-          name="name"
-          ngModel
-          required
+          placeholder="Client name"
+          class="form-control"
+          formControlName="name"
+          [ngClass]="{ 'is-invalid': submitted && hasError('name') }"
         />
+        <div class="invalid-feedback">
+          Nome incorreto, verifique-o e tente novamente.
+        </div>
       </div>
       <div class="form-group mb-3">
-        <label for="email" class="form-label">Email address <span id="req">*</span></label>
+        <label for="status" class="form-label">
+          Status do cliente <span id="req">*</span></label
+        >
+         <input
+          type="text"
+          list="status"
+          class="form-control"
+          formControlName="status"
+          placeholder="selecione uma das opções."
+          [ngClass]="{ 'is-invalid': submitted && hasError('status') }"
+        />
+        <datalist id="status">
+          <option value="Ativo"></option>
+          <option value="Inativo"></option>
+        </datalist>
+        <div class="invalid-feedback">Selecione uma das opções.</div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email de contato <span id="req">*</span> </label>
         <input
           type="email"
           class="form-control"
           id="email"
-          aria-describedby="emailHelp"
           name="email"
-          ngModel
-          required
-          email
-          #email
+          formControlName="email"
+          placeholder="abcdef@gmail.com"
+          [ngClass]="{ 'is-invalid': submitted && hasError('email') }"
         />
-        {{ email.className }}
 
-
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else .
+        <div class="invalid-feedback">
+          Email incorreto, verifique-o e tente novamente.
         </div>
       </div>
-      <div class="form-group mb-3">
-        <label for="pwd" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="pwd"
-          name="pwd"
-          ngModel
-          required
-          #pwd
-        />
-      </div>
+
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="exampleCheck1"
+          [ngClass]="{ 'is-invalid': submitted && hasError('phone') }"
+        />
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
-
       </div>
-      <div *ngIf="email.className == 'ng-touched ng-invalid' " class="alert alert-danger mt-3 align-center"> Preencha todos os campos com <span class="req">"*"</span>!</div>
-      <button type="submit" class="btn btn-primary">Adicionar</button>
+      <div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+          Adicionar
+        </button>
 
+        <!-- <ng-template #addDisabled>
+          <button class="btn btn-secondary">Adicionar</button>
+        </ng-template> -->
+
+        {{ " " }}
+        <button
+          class="btn btn-default"
+          style="border: 1px solid rgba(0, 0, 0, 0.386)"
+          (click)="onCancel()"
+        >
+          Cancelar
+        </button>
+      </div>
     </form>
   </div>
 </div>

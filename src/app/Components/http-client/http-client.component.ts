@@ -18,7 +18,7 @@ export class HttpClientComponent implements OnInit {
 
   @ViewChild('teste') teste!: ElementRef<any>
 
-  clients$: Observable<any> = of();
+  clients$!: Observable<any>;
   err$ = new Subject<boolean>();
   modalRef?: BsModalRef;
 
@@ -57,11 +57,8 @@ export class HttpClientComponent implements OnInit {
   }
 
   del() {
-    
+
   }
-
-
-
 
   onShow(tableClients: any) {
     tableClients = !tableClients

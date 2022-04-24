@@ -14,3 +14,7 @@
 #req {
   color: red;
 }
+
+.card-body {
+  cursor: pointer;
+}

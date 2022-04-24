@@ -22,12 +22,14 @@
       <tr>
         <th>#</th>
         <th>Clientes</th>
+        <th>Email</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let client of clientsAsy">
         <td>{{ client.id }}</td>
         <td>{{ client.name }}</td>
+        <td> {{ client.email }} </td>
         <td>
           <span class="float-end">
             <button class="btn btn-outline-primary mb-1 btn-sm">

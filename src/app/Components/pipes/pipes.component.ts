@@ -1,10 +1,12 @@
 import { isNgContainer } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { CamelCasePipe } from './camel-case.pipe';
 
 @Component({
   selector: 'app-pipes',
   templateUrl: './pipes.component.html',
-  styleUrls: ['./pipes.component.css']
+  styleUrls: ['./pipes.component.css'],
+  providers: [CamelCasePipe]
 })
 export class PipesComponent implements OnInit {
   book:any = {

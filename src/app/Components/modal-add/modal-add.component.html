@@ -1,9 +1,9 @@
-<button type="button" class="btn btn-primary" (click)="openModal(template)" routerLink="new" routerLinkActive="active">Add</button>
+<button type="button" class="btn btn-primary" (click)="openModal(template)" >Add</button>
 
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left">Adicionar clientes</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()" routerLink="/http" routerLinkActive="active">
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
       <span aria-hidden="true" class="visually-hidden">&times;</span>
     </button>
   </div>
