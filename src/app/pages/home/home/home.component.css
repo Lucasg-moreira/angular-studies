@@ -1,3 +1,9 @@
-h1 {
-  font-weight: lighter;
+article {
+  margin-top: 1em;
+}
+
+article p {
+  margin-top: 1em;
+  line-height: 1.5em;
+  text-align: justify;
 }

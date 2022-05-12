@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,13 +15,17 @@ import { AlertCardComponent } from './alert-card/alert-card.component';
 import { DropDownInput } from './dropdown-input/dropdown-input.component';
 import { AlertModal } from './alert-modal/alert-modal.component';
 import { ModalAddComponent } from './modal-add/modal-add.component';
+import { ErrorComponent } from './error/error.component';
+import { NgFunctionsModule } from '../Angular Funções/ng-functions.module';
+import { GridComponent } from './grid-component/grid-component.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   declarations: [
     NgxDropdownComponent,
@@ -32,13 +37,15 @@ import { ModalAddComponent } from './modal-add/modal-add.component';
     AlertModal,
     AlertCardComponent,
     ModalAddComponent,
-
+    ErrorComponent,
+    GridComponent,
   ],
   exports: [
     NgxDropdownComponent,
     ClientsFormComponent,
     HttpClientComponent,
     CriarCursoComponent,
+    ErrorComponent
   ],
   providers: [
     CamelCasePipe,

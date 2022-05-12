@@ -1,11 +1,10 @@
-import { Iclient } from './client';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from './../../../environments/environment';
-import { delay, tap, catchError } from 'rxjs/operators';
+import { delay } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-
+import { Iclient } from './client';
 import { take } from 'rxjs';
 
 @Injectable({

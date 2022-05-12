@@ -5,34 +5,30 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-import { NgFunctionsModule } from './Angular Funções/ng-functions.module';
 import { DirectivesModule } from './directives/directives.module';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home/home.component';
-import { DataBindingModule } from './Components/data-binding/data-binding.module';
-import { SettingsService } from './shared/settings.service';
+import { SettingsService } from './shared/settings/settings.service';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { ErrorService } from './shared/error.service';
+import { ErrorService } from './shared/error/error.service';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ComponentsModule } from './Components/Components.module';
+import { DataTablesModule } from 'angular-datatables';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataBindingModule,
     FormsModule,
     TooltipModule,
     AlertModule.forRoot(),
@@ -45,7 +41,7 @@ import { ComponentsModule } from './Components/Components.module';
     BsDropdownModule.forRoot(),
     DirectivesModule,
     ComponentsModule,
-    NgFunctionsModule
+    DataTablesModule
     ],
     providers: [
       SettingsService,

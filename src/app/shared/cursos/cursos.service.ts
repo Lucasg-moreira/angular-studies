@@ -1,5 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { LogService } from './log.service';
+import { LogService } from '../settings/log.service';
 
 @Injectable({
   providedIn: 'root'

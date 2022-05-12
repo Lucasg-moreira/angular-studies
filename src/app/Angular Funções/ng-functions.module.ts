@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+import { DataBindingComponent } from './../Components/data-binding/data-binding.component';
 import { NgModule } from '@angular/core';
 import { CommonModule} from '@angular/common';
 
@@ -23,11 +25,13 @@ import { DirectivesModule } from '../directives/directives.module';
     NgStyleComponent,
     OperatorElvisComponent,
     TwoWayComponent,
+    DataBindingComponent
 
   ],
   imports: [
     CommonModule,
-    DirectivesModule
+    DirectivesModule,
+    RouterModule
   ],exports: [
     CustomDirectivesComponent,
     NgClassComponent,
@@ -36,7 +40,8 @@ import { DirectivesModule } from '../directives/directives.module';
     NgIfComponent,
     NgStyleComponent,
     OperatorElvisComponent,
-    TwoWayComponent
+    TwoWayComponent,
+    DataBindingComponent
   ]
 })
 export class NgFunctionsModule { }

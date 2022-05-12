@@ -2,7 +2,7 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 
 
-import { CursosService } from '../../shared/cursos.service';
+import { CursosService } from '../../shared/cursos/cursos.service';
 
 @Component({
   selector: 'app-criar-curso',

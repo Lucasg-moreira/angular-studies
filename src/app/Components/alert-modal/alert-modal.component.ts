@@ -1,6 +1,6 @@
 import { Component, TemplateRef, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { ErrorService } from 'src/app/shared/error.service';
+import { ErrorService } from 'src/app/shared/error/error.service';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector

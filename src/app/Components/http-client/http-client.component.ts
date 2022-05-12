@@ -3,10 +3,8 @@ import { Component, OnInit, TemplateRef, ViewChild, ElementRef } from '@angular/
 import { of, Observable, from, interval, catchError, Subject } from 'rxjs';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ClientsService } from './clients.service';
-import { Iclient } from './client';
 
 import { AlertModal } from '../alert-modal/alert-modal.component';
-import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 
 @Component({
