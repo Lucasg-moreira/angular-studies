@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -41,7 +42,8 @@ import { DataTablesModule } from 'angular-datatables';
     BsDropdownModule.forRoot(),
     DirectivesModule,
     ComponentsModule,
-    DataTablesModule
+    DataTablesModule,
+    AuthModule
     ],
     providers: [
       SettingsService,

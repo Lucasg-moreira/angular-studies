@@ -1,0 +1,16 @@
+* {
+  font-weight: lighter;
+}
+.container {
+  margin-top: 1em;
+  background-color: #E9EDF0;
+  max-width: 20em;
+  min-height: 20em;
+  padding: 10px;
+}
+
+.col {
+  margin: 2.5em;
+}
+
+

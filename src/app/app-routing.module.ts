@@ -10,7 +10,8 @@ import { GridComponent } from './Components/grid-component/grid-component.compon
 
 const routes: Routes = [
   { path: '',
-   redirectTo: '/home', pathMatch: 'full' },
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+},
   { path: 'home',
    component: HomeComponent },
   { path: 'projetos',
