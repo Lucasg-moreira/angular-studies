@@ -1,19 +1,20 @@
-import { User } from './user';
+import { User, Login } from './user';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthguardService {
   auth!: boolean;
-  constructor() { }
+  constructor() {}
 
-  verifyLogin(user: User){
-    if(user.email === "admin@gmail.com" && user.password === "admin"){
+  verifyLogin(user: any) {
+    console.log("login", user)
+    if (user.value.email == 'admin@gmail.com' && user.value.password == 'admin') {
       this.auth = true;
-      alert("logado!");
+      alert('logado!');
+    } else {
+      alert('incorreto!');
     }
   }
-
-
 }

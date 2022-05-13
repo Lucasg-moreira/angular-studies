@@ -1,15 +1,18 @@
 <article>
   <div class="container">
-    <form>
+    <form [formGroup]="form">
       <div class="col col-md-1">
         <div class="email" class="form-group">
           <h6 class="text-align-right">Email</h6>
-          <input type="email" />
+          <input type="email"
+          formControlName="email" />
         </div>
         <div class="pwd">
           <h6>Password</h6>
-          <input type="password" />
+          <input type="password"
+          formControlName="password" />
         </div>
+        <button (click)="onSubmit()">Enviar</button>
       </div>
     </form>
   </div>
