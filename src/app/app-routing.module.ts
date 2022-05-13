@@ -7,22 +7,24 @@ import { HttpClientComponent } from './Components/http-client/http-client.compon
 import { ProjetosComponent } from './pages/projetos/projetos.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { GridComponent } from './Components/grid-component/grid-component.component';
+import { AuthguardService } from './auth/authguard.service';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
 },
   { path: 'home',
-   component: HomeComponent },
+   component: HomeComponent, canActivate: [AuthGuard]},
   { path: 'projetos',
-   loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule )},
+   loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard]},
   {
     path: 'http',
-    component: HttpClientComponent,
+    component: HttpClientComponent, canActivate: [AuthGuard]
   },
   {
     path: 'dt',
-    component: GridComponent
+    component: GridComponent, canActivate: [AuthGuard]
   },
   {
     path: '**',

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
       password: ['']
     })
 
-
+  localStorage.setItem('login', 'false')
   }
 
   onSubmit(){

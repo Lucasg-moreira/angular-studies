@@ -1,20 +1,23 @@
 import { User, Login } from './user';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthguardService {
   auth!: boolean;
-  constructor() {}
+  constructor(private router: Router) {}
+
 
   verifyLogin(user: any) {
-    console.log("login", user)
     if (user.value.email == 'admin@gmail.com' && user.value.password == 'admin') {
       this.auth = true;
-      alert('logado!');
+      alert('Logado com sucesso!');
+      this.router.navigate(['./home'])
+      localStorage.setItem('login', 'true')
     } else {
-      alert('incorreto!');
+      alert('Dados incorretos! Tente Novamente');
     }
   }
 }
