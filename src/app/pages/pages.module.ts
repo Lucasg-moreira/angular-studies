@@ -4,11 +4,13 @@ import { ProjetosComponent } from './projetos/projetos.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BtnstrapComponent } from '../Projetos/btnstrap/btnstrap.component';
+import { ComponentsModule } from '../Components/Components.module';
 
 @NgModule({
   imports: [
   CommonModule,
-  PagesRoutes
+  PagesRoutes,
+  ComponentsModule
 ],
   declarations: [
     ProjetosComponent,

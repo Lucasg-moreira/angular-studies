@@ -18,6 +18,7 @@ import { ModalAddComponent } from './modal-add/modal-add.component';
 import { ErrorComponent } from './error/error.component';
 import { NgFunctionsModule } from '../Angular Funções/ng-functions.module';
 import { GridComponent } from './grid-component/grid-component.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -39,13 +40,15 @@ import { GridComponent } from './grid-component/grid-component.component';
     ModalAddComponent,
     ErrorComponent,
     GridComponent,
+    CardComponent,
   ],
   exports: [
     NgxDropdownComponent,
     ClientsFormComponent,
     HttpClientComponent,
     CriarCursoComponent,
-    ErrorComponent
+    ErrorComponent,
+    CardComponent
   ],
   providers: [
     CamelCasePipe,
