@@ -3,14 +3,19 @@
 }
 .container {
   margin-top: 1em;
-  background-color: #E9EDF0;
   max-width: 20em;
+  box-shadow: 10px solid black;
   min-height: 20em;
   padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.413);
 }
 
 .col {
   margin: 2.5em;
+}
+
+#title {
+  padding: 10px;
 }
 
 
