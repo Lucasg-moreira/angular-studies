@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
 
   title: string = 'adb'
   text: string = 'teste'
-  clink: string[] = ['sim', 'não', 'talvez']
+  clink: string[] = ['sim']
 
   constructor() { }
 
