@@ -1,19 +1,5 @@
-#projectteste {
-  display: none;
-}
-
-
-#project:hover #projectteste {
-  color: red;
-  cursor: pointer;
-  display: block;
-
-}
-
-
 .container {
-  margin-top: 1em;
-  min-height: 25em;
+  min-height: 33em;
   text-align: center;
   border: solid 1px rgba(0, 0, 0, 0.248);
   box-shadow: 1px 1px 8px;
