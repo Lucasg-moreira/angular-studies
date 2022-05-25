@@ -8,14 +8,14 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthguardService } from './authguard.service';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  user!: Login;
-  constructor(private auth: AuthguardService, private router: Router) {}
+  user!: boolean;
+  constructor(private auth: AuthService, private router: Router) {}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -25,12 +25,10 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
 
-    const login = localStorage.getItem('login');
-    console.log('log', login);
-    if (login === 'true') {
+    if (this.user === true) {
       return true;
     } else {
-      alert("Você deve se logar.")
+      alert("Você não tem autorização, logue-se.")
       this.router.navigate(['login'])
       return false;
     }

@@ -20,7 +20,7 @@ import { ErrorService } from './shared/error/error.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ComponentsModule } from './Components/Components.module';
 import { DataTablesModule } from 'angular-datatables';
-import { AuthguardService } from './auth/authguard.service';
+import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
 
 
@@ -60,7 +60,7 @@ import { AuthGuard } from './auth/auth.guard';
         useFactory: (settingsService: any) => settingsService.getLocale()
       },
       ErrorService,
-      AuthguardService,
+      AuthService,
       AuthGuard
 
     ],
