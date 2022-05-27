@@ -41,9 +41,8 @@ export class LoginComponent implements OnInit {
     this.getValues();
 
     if (this.userMail == email && this.userPass == password) {
-      alert('Login efetuado!');
       this.authguard.user = true
-      this.router.navigate(['/home']);
+      this.router.navigate(['/pages/home']);
     } else {
       alert('Seu login não foi efetuado. Tente novamente.');
     }

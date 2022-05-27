@@ -1,17 +1,30 @@
 <article>
   <header>
-    <h1>Objetivo do repositório</h1>
+    <h3>Objetivo do repositório</h3>
   </header>
   <p>
-    Este repositório foi criado com o propósito de alocar todo o conteúdo que estudei/venho estudando sobre angular. Como uma forma de burlar o espaço de armazenamento, pensei comigo mesmo: "Por que não criar um só local onde posso ir atualizando e melhorando conforme o tempo passa". E cá estamos.
+    Este repositório foi criado com o propósito de alocar todo o conteúdo que
+    estudei/venho estudando sobre angular. Como uma forma de burlar o espaço de
+    armazenamento, pensei comigo mesmo: "Por que não criar um só local onde
+    posso ir atualizando e melhorando conforme o tempo passa". E cá estamos.
   </p>
-    <aside>
+  <h4>Projetos já feitos:</h4>
+  <aside class="mb-2">
+    <div class="container">
       <div class="row">
-        <app-card
-         [text]="text"
-         [title]="title"
-         [clink]="clink">
+        <div class="col-sm">
+          <app-card
+          [text]="text" [title]="title" [link]="link">
         </app-card>
+          <app-card
+          [text]="text_2" [title]="title_2">
+        </app-card>
+          <app-card
+          [text]="text_3" [title]="title_3">
+        </app-card>
+        </div>
+
       </div>
-    </aside>
+    </div>
+  </aside>
 </article>

@@ -3,31 +3,31 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-import { DirectivesModule } from './directives/directives.module';
-
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SettingsService } from './shared/settings/settings.service';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AlertModule } from 'ngx-bootstrap/alert';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { ErrorService } from './shared/error/error.service';
-
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ComponentsModule } from './Components/Components.module';
-import { DataTablesModule } from 'angular-datatables';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { DirectivesModule } from './directives/directives.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ComponentsModule } from './Components/Components.module';
+import { RouterModule } from '@angular/router';
+import { DataTablesModule } from 'angular-datatables';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { PagesModule } from './pages/pages.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -40,12 +40,14 @@ import { AuthGuard } from './auth/auth.guard';
     HttpClientModule,
     ReactiveFormsModule,
     ComponentsModule,
-    BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     DirectivesModule,
     ComponentsModule,
     DataTablesModule,
-    AuthModule
+    AuthModule,
+    PagesModule,
+    RouterModule,
+    AccordionModule.forRoot(),
     ],
     providers: [
       SettingsService,
